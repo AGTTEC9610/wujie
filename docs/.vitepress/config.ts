@@ -77,6 +77,7 @@ export default defineConfig({
         ],
       },
       { text: "在线体验无界", link: "/wujie/", activeMatch: "/wujie/" },
+      { text: "fluth", link: "https://fluthjs.github.io/fluth-doc/cn/index.html" },
     ],
 
     sidebar: {
