@@ -375,5 +375,5 @@ export function eventTrigger(el: HTMLElement | Window | Document, eventName: str
 
 export function stopMainAppRun() {
   warn(WUJIE_TIPS_STOP_APP_DETAIL);
-  throw new Error(WUJIE_TIPS_STOP_APP);
+  throw new Error(t(WUJIE_TIPS_STOP_APP));
 }

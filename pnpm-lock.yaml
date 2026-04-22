@@ -131,7 +131,7 @@ importers:
   examples/main-react:
     dependencies:
       '@agttec9610/wujie-react':
-        specifier: workspace:^1.0.29-agt.1
+        specifier: workspace:^1.0.29-agt.2
         version: link:../../packages/wujie-react
       '@ant-design/icons':
         specifier: ^4.7.0
@@ -305,10 +305,10 @@ importers:
   examples/main-vue:
     dependencies:
       '@agttec9610/wujie':
-        specifier: workspace:^1.0.29-agt.1
+        specifier: workspace:^1.0.29-agt.2
         version: link:../../packages/wujie-core
       '@agttec9610/wujie-vue2':
-        specifier: workspace:^1.0.29-agt.1
+        specifier: workspace:^1.0.29-agt.2
         version: link:../../packages/wujie-vue2
       ant-design-vue:
         specifier: ^1.7.8
@@ -366,7 +366,7 @@ importers:
   examples/react16:
     dependencies:
       '@agttec9610/wujie-react':
-        specifier: workspace:^1.0.29-agt.1
+        specifier: workspace:^1.0.29-agt.2
         version: link:../../packages/wujie-react
       '@babel/core':
         specifier: ^7.16.0
@@ -997,7 +997,7 @@ importers:
   packages/wujie-react:
     dependencies:
       '@agttec9610/wujie':
-        specifier: workspace:1.0.29-agt.1
+        specifier: workspace:1.0.29-agt.2
         version: link:../wujie-core
       prop-types:
         specifier: ^15.8.1
@@ -1040,7 +1040,7 @@ importers:
   packages/wujie-vue2:
     dependencies:
       '@agttec9610/wujie':
-        specifier: workspace:1.0.29-agt.1
+        specifier: workspace:1.0.29-agt.2
         version: link:../wujie-core
       vue:
         specifier: ^2.6.0
@@ -1080,7 +1080,7 @@ importers:
   packages/wujie-vue3:
     dependencies:
       '@agttec9610/wujie':
-        specifier: workspace:1.0.29-agt.1
+        specifier: workspace:1.0.29-agt.2
         version: link:../wujie-core
     devDependencies:
       '@babel/cli':

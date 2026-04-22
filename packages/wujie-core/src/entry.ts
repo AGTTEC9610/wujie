@@ -6,6 +6,7 @@ import processTpl, {
   StyleObject,
 } from "./template";
 import { defaultGetPublicPath, getInlineCode, requestIdleCallback, error, compose, getCurUrl } from "./utils";
+import { t } from "./i18n";
 import {
   WUJIE_TIPS_NO_FETCH,
   WUJIE_TIPS_SCRIPT_ERROR_REQUESTED,
@@ -116,12 +117,12 @@ const fetchAssets = (
         cache[src] = null;
         if (cssFlag) {
           error(WUJIE_TIPS_CSS_ERROR_REQUESTED, { src, response });
-          loadError?.(src, new Error(WUJIE_TIPS_CSS_ERROR_REQUESTED));
+          loadError?.(src, new Error(t(WUJIE_TIPS_CSS_ERROR_REQUESTED)));
           return "";
         } else {
           error(WUJIE_TIPS_SCRIPT_ERROR_REQUESTED, { src, response });
-          loadError?.(src, new Error(WUJIE_TIPS_SCRIPT_ERROR_REQUESTED));
-          throw new Error(WUJIE_TIPS_SCRIPT_ERROR_REQUESTED);
+          loadError?.(src, new Error(t(WUJIE_TIPS_SCRIPT_ERROR_REQUESTED)));
+          throw new Error(t(WUJIE_TIPS_SCRIPT_ERROR_REQUESTED));
         }
       }
       return response.text();
@@ -220,7 +221,7 @@ export default function importHTML(params: {
           .then((response) => {
             if (response.status >= 400) {
               error(WUJIE_TIPS_HTML_ERROR_REQUESTED, { url, response });
-              loadError?.(url, new Error(WUJIE_TIPS_HTML_ERROR_REQUESTED));
+              loadError?.(url, new Error(t(WUJIE_TIPS_HTML_ERROR_REQUESTED)));
               return "";
             }
             return response.text();
