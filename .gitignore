@@ -4,6 +4,7 @@ dist
 site
 lib
 esm
+dist-packages
 .DS_Store
 .vscode
 yarn.lock
