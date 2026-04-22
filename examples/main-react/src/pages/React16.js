@@ -1,6 +1,6 @@
 import React from "react";
 import hostMap from "../hostMap";
-import WujieReact from "wujie-react";
+import WujieReact from "@agttec9610/wujie-react";
 import { useNavigate, useLocation } from "react-router-dom";
 
 export default function React16() {

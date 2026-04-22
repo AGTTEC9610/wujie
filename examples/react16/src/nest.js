@@ -1,5 +1,5 @@
 import React from "react";
-import WujieReact from "wujie-react";
+import WujieReact from "@agttec9610/wujie-react";
 import lifecycles from "./lifecycle";
 import hostMap from "./hostMap"
 

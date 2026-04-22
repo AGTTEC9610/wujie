@@ -7,7 +7,7 @@
  * rebasar con upstream (Tencent/wujie).
  *
  * Uso:
- *   import { setLocale } from "wujie";
+ *   import { setLocale } from "@agttec9610/wujie";
  *   setLocale("es");
  */
 

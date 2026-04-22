@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { bus, preloadApp, startApp, destroyApp, setupApp } from "wujie";
+import { bus, preloadApp, startApp, destroyApp, setupApp } from "@agttec9610/wujie";
 
 export default class WujieReact extends React.PureComponent {
   static propTypes = propTypes;

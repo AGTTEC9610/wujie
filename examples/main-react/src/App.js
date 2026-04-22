@@ -1,5 +1,5 @@
 import { HashRouter as Router, Route, Routes, NavLink, Navigate, useLocation, useNavigate } from "react-router-dom";
-import WujieReact from "wujie-react";
+import WujieReact from "@agttec9610/wujie-react";
 import React, { useState } from "react";
 import Home from "./pages/Home";
 import React16 from "./pages/React16";

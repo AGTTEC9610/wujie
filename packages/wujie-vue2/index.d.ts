@@ -1,5 +1,5 @@
 import { VueConstructor } from "vue";
-import { bus, preloadApp, destroyApp, setupApp } from "wujie";
+import { bus, preloadApp, destroyApp, setupApp } from "@agttec9610/wujie";
 
 declare const WujieVue: {
   bus: typeof bus;

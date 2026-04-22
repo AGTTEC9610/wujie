@@ -4,7 +4,7 @@ import "custom-event-polyfill";
 import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
-import WujieVue from "wujie-vue2";
+import WujieVue from "@agttec9610/wujie-vue2";
 import hostMap from "./hostMap";
 import credentialsFetch from "./fetch";
 import Switch from "ant-design-vue/es/switch";

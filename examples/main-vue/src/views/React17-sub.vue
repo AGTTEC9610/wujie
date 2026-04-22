@@ -5,7 +5,7 @@
 
 <script>
 import hostMap from "../hostMap";
-import wujieVue from "wujie-vue2";
+import wujieVue from "@agttec9610/wujie-vue2";
 export default {
   data() {
     return {

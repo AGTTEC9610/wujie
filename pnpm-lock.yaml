@@ -32,6 +32,9 @@ importers:
 
   docs:
     dependencies:
+      '@agttec9610/wujie-vue3':
+        specifier: workspace:*
+        version: link:../packages/wujie-vue3
       '@documate/documate':
         specifier: ^0.2.0
         version: 0.2.1
@@ -41,9 +44,6 @@ importers:
       vue:
         specifier: ^3.2.38
         version: 3.5.32(typescript@4.9.5)
-      wujie-vue3:
-        specifier: workspace:*
-        version: link:../packages/wujie-vue3
     devDependencies:
       '@documate/vue':
         specifier: ^0.2.3
@@ -130,6 +130,9 @@ importers:
 
   examples/main-react:
     dependencies:
+      '@agttec9610/wujie-react':
+        specifier: workspace:^1.0.29-agt.1
+        version: link:../../packages/wujie-react
       '@ant-design/icons':
         specifier: ^4.7.0
         version: 4.8.3(react-dom@17.0.2(react@17.0.2))(react@17.0.2)
@@ -298,12 +301,15 @@ importers:
       workbox-webpack-plugin:
         specifier: ^6.4.1
         version: 6.6.1(@types/babel__core@7.20.5)(webpack@5.98.0)
-      wujie-react:
-        specifier: workspace:^1.0.29
-        version: link:../../packages/wujie-react
 
   examples/main-vue:
     dependencies:
+      '@agttec9610/wujie':
+        specifier: workspace:^1.0.29-agt.1
+        version: link:../../packages/wujie-core
+      '@agttec9610/wujie-vue2':
+        specifier: workspace:^1.0.29-agt.1
+        version: link:../../packages/wujie-vue2
       ant-design-vue:
         specifier: ^1.7.8
         version: 1.7.8(vue-template-compiler@2.7.16)(vue@2.7.16)
@@ -322,12 +328,6 @@ importers:
       whatwg-fetch:
         specifier: ^3.6.2
         version: 3.6.20
-      wujie:
-        specifier: workspace:^1.0.29
-        version: link:../../packages/wujie-core
-      wujie-vue2:
-        specifier: workspace:^1.0.29
-        version: link:../../packages/wujie-vue2
     devDependencies:
       '@vue/cli-plugin-babel':
         specifier: ~4.5.0
@@ -365,6 +365,9 @@ importers:
 
   examples/react16:
     dependencies:
+      '@agttec9610/wujie-react':
+        specifier: workspace:^1.0.29-agt.1
+        version: link:../../packages/wujie-react
       '@babel/core':
         specifier: ^7.16.0
         version: 7.29.0
@@ -533,9 +536,6 @@ importers:
       workbox-webpack-plugin:
         specifier: ^6.4.1
         version: 6.6.1(@types/babel__core@7.20.5)(webpack@5.98.0)
-      wujie-react:
-        specifier: workspace:^1.0.29
-        version: link:../../packages/wujie-react
     devDependencies:
       '@babel/plugin-proposal-nullish-coalescing-operator':
         specifier: ^7.17.12
@@ -996,15 +996,15 @@ importers:
 
   packages/wujie-react:
     dependencies:
+      '@agttec9610/wujie':
+        specifier: workspace:1.0.29-agt.1
+        version: link:../wujie-core
       prop-types:
         specifier: ^15.8.1
         version: 15.8.1
       react:
         specifier: '>=16.0.0'
         version: 17.0.2
-      wujie:
-        specifier: workspace:1.0.29
-        version: link:../wujie-core
     devDependencies:
       '@babel/cli':
         specifier: ^7.18.6
@@ -1039,12 +1039,12 @@ importers:
 
   packages/wujie-vue2:
     dependencies:
+      '@agttec9610/wujie':
+        specifier: workspace:1.0.29-agt.1
+        version: link:../wujie-core
       vue:
         specifier: ^2.6.0
         version: 2.7.16
-      wujie:
-        specifier: workspace:1.0.29
-        version: link:../wujie-core
     devDependencies:
       '@babel/cli':
         specifier: ^7.18.6
@@ -1079,8 +1079,8 @@ importers:
 
   packages/wujie-vue3:
     dependencies:
-      wujie:
-        specifier: workspace:1.0.29
+      '@agttec9610/wujie':
+        specifier: workspace:1.0.29-agt.1
         version: link:../wujie-core
     devDependencies:
       '@babel/cli':
@@ -14951,8 +14951,8 @@ snapshots:
     dependencies:
       '@ampproject/remapping': 1.0.1
       '@angular-devkit/architect': 0.1202.18
-      '@angular-devkit/build-optimizer': 0.1202.18(webpack@5.50.0)
-      '@angular-devkit/build-webpack': 0.1202.18(webpack-dev-server@3.11.3(webpack@5.50.0))(webpack@5.50.0)
+      '@angular-devkit/build-optimizer': 0.1202.18(webpack@5.50.0(esbuild@0.13.8))
+      '@angular-devkit/build-webpack': 0.1202.18(webpack-dev-server@3.11.3(webpack@5.50.0))(webpack@5.50.0(esbuild@0.13.8))
       '@angular-devkit/core': 12.2.18
       '@angular/compiler-cli': 12.2.17(@angular/compiler@12.2.17)(typescript@4.3.5)
       '@babel/core': 7.14.8
@@ -14966,18 +14966,18 @@ snapshots:
       '@babel/template': 7.14.5
       '@discoveryjs/json-ext': 0.5.3
       '@jsdevtools/coverage-istanbul-loader': 3.0.5
-      '@ngtools/webpack': 12.2.18(@angular/compiler-cli@12.2.17(@angular/compiler@12.2.17)(typescript@4.3.5))(typescript@4.3.5)(webpack@5.50.0)
+      '@ngtools/webpack': 12.2.18(@angular/compiler-cli@12.2.17(@angular/compiler@12.2.17)(typescript@4.3.5))(typescript@4.3.5)(webpack@5.50.0(esbuild@0.13.8))
       ansi-colors: 4.1.1
-      babel-loader: 8.2.2(@babel/core@7.14.8)(webpack@5.50.0)
+      babel-loader: 8.2.2(@babel/core@7.14.8)(webpack@5.50.0(esbuild@0.13.8))
       browserslist: 4.28.2
       cacache: 15.2.0
       caniuse-lite: 1.0.30001788
-      circular-dependency-plugin: 5.2.2(webpack@5.50.0)
-      copy-webpack-plugin: 9.0.1(webpack@5.50.0)
+      circular-dependency-plugin: 5.2.2(webpack@5.50.0(esbuild@0.13.8))
+      copy-webpack-plugin: 9.0.1(webpack@5.50.0(esbuild@0.13.8))
       core-js: 3.16.0
       critters: 0.0.12
       css-loader: 6.2.0(webpack@5.50.0)
-      css-minimizer-webpack-plugin: 3.0.2(webpack@5.50.0)
+      css-minimizer-webpack-plugin: 3.0.2(webpack@5.50.0(esbuild@0.13.8))
       esbuild-wasm: 0.13.8
       find-cache-dir: 3.3.1
       glob: 7.1.7
@@ -14986,9 +14986,9 @@ snapshots:
       karma-source-map-support: 1.4.0
       less: 4.1.1
       less-loader: 10.0.1(less@4.1.1)(webpack@5.50.0)
-      license-webpack-plugin: 2.3.20(webpack@5.50.0)
+      license-webpack-plugin: 2.3.20(webpack@5.50.0(esbuild@0.13.8))
       loader-utils: 2.0.0
-      mini-css-extract-plugin: 2.4.2(webpack@5.50.0)
+      mini-css-extract-plugin: 2.4.2(webpack@5.50.0(esbuild@0.13.8))
       minimatch: 3.0.4
       open: 8.2.1
       ora: 5.4.1
@@ -14996,7 +14996,7 @@ snapshots:
       piscina: 3.1.0
       postcss: 8.3.6
       postcss-import: 14.0.2(postcss@8.3.6)
-      postcss-loader: 6.1.1(postcss@8.3.6)(webpack@5.50.0)
+      postcss-loader: 6.1.1(postcss@8.3.6)(webpack@5.50.0(esbuild@0.13.8))
       postcss-preset-env: 6.7.0
       regenerator-runtime: 0.13.9
       resolve-url-loader: 4.0.0(rework-visit@1.0.0)(rework@1.0.1)
@@ -15004,22 +15004,22 @@ snapshots:
       sass: 1.36.0
       sass-loader: 12.1.0(sass@1.36.0)(webpack@5.50.0)
       semver: 7.3.5
-      source-map-loader: 3.0.0(webpack@5.50.0)
+      source-map-loader: 3.0.0(webpack@5.50.0(esbuild@0.13.8))
       source-map-support: 0.5.19
-      style-loader: 3.2.1(webpack@5.50.0)
+      style-loader: 3.2.1(webpack@5.50.0(esbuild@0.13.8))
       stylus: 0.54.8
       stylus-loader: 6.1.0(stylus@0.54.8)(webpack@5.50.0)
       terser: 5.14.2
-      terser-webpack-plugin: 5.1.4(webpack@5.50.0)
+      terser-webpack-plugin: 5.1.4(webpack@5.50.0(esbuild@0.13.8))
       text-table: 0.2.0
       tree-kill: 1.2.2
       tslib: 2.3.0
       typescript: 4.3.5
       webpack: 5.50.0(esbuild@0.13.8)
-      webpack-dev-middleware: 5.0.0(webpack@5.50.0)
+      webpack-dev-middleware: 5.0.0(webpack@5.50.0(esbuild@0.13.8))
       webpack-dev-server: 3.11.3(webpack@5.50.0)
       webpack-merge: 5.8.0
-      webpack-subresource-integrity: 1.5.2(html-webpack-plugin@4.5.0(webpack@5.50.0))(webpack@5.50.0)
+      webpack-subresource-integrity: 1.5.2(html-webpack-plugin@4.5.0(webpack@5.50.0))(webpack@5.50.0(esbuild@0.13.8))
     optionalDependencies:
       esbuild: 0.13.8
       karma: 6.3.20
@@ -15039,7 +15039,7 @@ snapshots:
       - utf-8-validate
       - webpack-cli
 
-  '@angular-devkit/build-optimizer@0.1202.18(webpack@5.50.0)':
+  '@angular-devkit/build-optimizer@0.1202.18(webpack@5.50.0(esbuild@0.13.8))':
     dependencies:
       source-map: 0.7.3
       tslib: 2.3.0
@@ -15047,7 +15047,7 @@ snapshots:
     optionalDependencies:
       webpack: 5.50.0(esbuild@0.13.8)
 
-  '@angular-devkit/build-webpack@0.1202.18(webpack-dev-server@3.11.3(webpack@5.50.0))(webpack@5.50.0)':
+  '@angular-devkit/build-webpack@0.1202.18(webpack-dev-server@3.11.3(webpack@5.50.0))(webpack@5.50.0(esbuild@0.13.8))':
     dependencies:
       '@angular-devkit/architect': 0.1202.18
       rxjs: 6.6.7
@@ -18307,7 +18307,7 @@ snapshots:
       call-me-maybe: 1.0.2
       glob-to-regexp: 0.3.0
 
-  '@ngtools/webpack@12.2.18(@angular/compiler-cli@12.2.17(@angular/compiler@12.2.17)(typescript@4.3.5))(typescript@4.3.5)(webpack@5.50.0)':
+  '@ngtools/webpack@12.2.18(@angular/compiler-cli@12.2.17(@angular/compiler@12.2.17)(typescript@4.3.5))(typescript@4.3.5)(webpack@5.50.0(esbuild@0.13.8))':
     dependencies:
       '@angular/compiler-cli': 12.2.17(@angular/compiler@12.2.17)(typescript@4.3.5)
       typescript: 4.3.5
@@ -21253,7 +21253,7 @@ snapshots:
       schema-utils: 2.7.1
       webpack: 5.98.0(webpack-cli@4.10.0)
 
-  babel-loader@8.2.2(@babel/core@7.14.8)(webpack@5.50.0):
+  babel-loader@8.2.2(@babel/core@7.14.8)(webpack@5.50.0(esbuild@0.13.8)):
     dependencies:
       '@babel/core': 7.14.8
       find-cache-dir: 3.3.1
@@ -22016,7 +22016,7 @@ snapshots:
       safe-buffer: 5.2.1
       to-buffer: 1.2.2
 
-  circular-dependency-plugin@5.2.2(webpack@5.50.0):
+  circular-dependency-plugin@5.2.2(webpack@5.50.0(esbuild@0.13.8)):
     dependencies:
       webpack: 5.50.0(esbuild@0.13.8)
 
@@ -22416,7 +22416,7 @@ snapshots:
       webpack: 4.44.2
       webpack-log: 2.0.0
 
-  copy-webpack-plugin@9.0.1(webpack@5.50.0):
+  copy-webpack-plugin@9.0.1(webpack@5.50.0(esbuild@0.13.8)):
     dependencies:
       fast-glob: 3.3.3
       glob-parent: 6.0.2
@@ -22664,7 +22664,7 @@ snapshots:
       semver: 7.5.2
       webpack: 5.50.0(esbuild@0.13.8)
 
-  css-minimizer-webpack-plugin@3.0.2(webpack@5.50.0):
+  css-minimizer-webpack-plugin@3.0.2(webpack@5.50.0(esbuild@0.13.8)):
     dependencies:
       cssnano: 5.1.15(postcss@8.5.10)
       jest-worker: 27.5.1
@@ -27026,7 +27026,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  license-webpack-plugin@2.3.20(webpack@5.50.0):
+  license-webpack-plugin@2.3.20(webpack@5.50.0(esbuild@0.13.8)):
     dependencies:
       '@types/webpack-sources': 0.1.12
       webpack-sources: 1.4.3
@@ -27509,7 +27509,7 @@ snapshots:
       tapable: 2.3.3
       webpack: 5.98.0(webpack-cli@4.10.0)
 
-  mini-css-extract-plugin@2.4.2(webpack@5.50.0):
+  mini-css-extract-plugin@2.4.2(webpack@5.50.0(esbuild@0.13.8)):
     dependencies:
       schema-utils: 3.3.0
       webpack: 5.50.0(esbuild@0.13.8)
@@ -28863,7 +28863,7 @@ snapshots:
       postcss-load-config: 2.1.2
       schema-utils: 1.0.0
 
-  postcss-loader@6.1.1(postcss@8.3.6)(webpack@5.50.0):
+  postcss-loader@6.1.1(postcss@8.3.6)(webpack@5.50.0(esbuild@0.13.8)):
     dependencies:
       cosmiconfig: 7.1.0
       klona: 2.0.6
@@ -31663,7 +31663,7 @@ snapshots:
 
   source-map-js@1.2.1: {}
 
-  source-map-loader@3.0.0(webpack@5.50.0):
+  source-map-loader@3.0.0(webpack@5.50.0(esbuild@0.13.8)):
     dependencies:
       abab: 2.0.6
       iconv-lite: 0.6.3
@@ -32011,7 +32011,7 @@ snapshots:
       schema-utils: 2.7.1
       webpack: 4.44.2
 
-  style-loader@3.2.1(webpack@5.50.0):
+  style-loader@3.2.1(webpack@5.50.0(esbuild@0.13.8)):
     dependencies:
       webpack: 5.50.0(esbuild@0.13.8)
 
@@ -32249,7 +32249,7 @@ snapshots:
     transitivePeerDependencies:
       - bluebird
 
-  terser-webpack-plugin@5.1.4(webpack@5.50.0):
+  terser-webpack-plugin@5.1.4(webpack@5.50.0(esbuild@0.13.8)):
     dependencies:
       jest-worker: 27.5.1
       p-limit: 3.1.0
@@ -33299,7 +33299,7 @@ snapshots:
       webpack: 5.50.0(esbuild@0.13.8)
       webpack-log: 2.0.0
 
-  webpack-dev-middleware@5.0.0(webpack@5.50.0):
+  webpack-dev-middleware@5.0.0(webpack@5.50.0(esbuild@0.13.8)):
     dependencies:
       colorette: 1.4.0
       mem: 8.1.1
@@ -33484,7 +33484,7 @@ snapshots:
 
   webpack-sources@3.3.4: {}
 
-  webpack-subresource-integrity@1.5.2(html-webpack-plugin@4.5.0(webpack@5.50.0))(webpack@5.50.0):
+  webpack-subresource-integrity@1.5.2(html-webpack-plugin@4.5.0(webpack@5.50.0))(webpack@5.50.0(esbuild@0.13.8)):
     dependencies:
       webpack: 5.50.0(esbuild@0.13.8)
       webpack-sources: 1.4.3

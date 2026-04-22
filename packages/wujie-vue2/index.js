@@ -1,5 +1,5 @@
 import Vue from "vue";
-import { bus, preloadApp, startApp as rawStartApp, destroyApp, setupApp } from "wujie";
+import { bus, preloadApp, startApp as rawStartApp, destroyApp, setupApp } from "@agttec9610/wujie";
 
 const wujieVueOptions = {
   name: "WujieVue",

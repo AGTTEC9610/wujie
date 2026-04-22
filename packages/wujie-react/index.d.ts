@@ -1,4 +1,4 @@
-import { bus, preloadApp, destroyApp, setupApp } from "wujie";
+import { bus, preloadApp, destroyApp, setupApp } from "@agttec9610/wujie";
 import PropTypes from "prop-types";
 import React from "react";
 

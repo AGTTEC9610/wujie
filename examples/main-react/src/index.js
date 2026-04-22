@@ -3,7 +3,7 @@ import "react-app-polyfill/ie11";
 
 import React from "react";
 import ReactDOM from "react-dom";
-import WujieReact from "wujie-react";
+import WujieReact from "@agttec9610/wujie-react";
 import "antd/es/switch/style/css.js";
 import "antd/es/tooltip/style/css.js";
 import "antd/es/button/style/css.js";

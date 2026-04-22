@@ -21,6 +21,6 @@
     "@documate/documate": "^0.2.0",
     "@vue/theme": "^1.2.2",
     "vue": "^3.2.38",
-    "wujie-vue3": "workspace:*"
+    "@agttec9610/wujie-vue3": "workspace:*"
   }
 }

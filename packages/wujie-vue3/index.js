@@ -1,4 +1,4 @@
-import { bus, preloadApp, startApp as rawStartApp, destroyApp, setupApp } from "wujie";
+import { bus, preloadApp, startApp as rawStartApp, destroyApp, setupApp } from "@agttec9610/wujie";
 import { h, defineComponent } from "vue";
 
 const wujieVueOptions = {
