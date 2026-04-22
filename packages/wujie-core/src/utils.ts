@@ -6,6 +6,7 @@ import {
   WUJIE_TIPS_STOP_APP_DETAIL,
 } from "./constant";
 import { plugin, cacheOptions } from "./index";
+import { t } from "./i18n";
 
 export function toArray<T>(array: T | T[]): T[] {
   return Array.isArray(array) ? array : [array];
@@ -247,11 +248,11 @@ export function getContainer(container: string | HTMLElement): HTMLElement {
 }
 
 export function warn(msg: string, data?: any): void {
-  console?.warn(`[wujie warn]: ${msg}`, data);
+  console?.warn(`[wujie warn]: ${t(msg)}`, data);
 }
 
 export function error(msg: string, data?: any): void {
-  console?.error(`[wujie error]: ${msg}`, data);
+  console?.error(`[wujie error]: ${t(msg)}`, data);
 }
 
 export function getInlineCode(match) {

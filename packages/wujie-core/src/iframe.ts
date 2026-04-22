@@ -37,6 +37,7 @@ import type { appAddEventListenerOptions } from "./common";
 import { getJsLoader } from "./plugin";
 import { WUJIE_TIPS_SCRIPT_ERROR_REQUESTED, WUJIE_DATA_FLAG } from "./constant";
 import { ScriptObjectLoader } from "./index";
+import { t } from "./i18n";
 
 declare global {
   interface Window {
@@ -607,8 +608,11 @@ function patchNodeEffect(iframeWindow: Window): void {
     try {
       res = rawRemoveChild.call(this, node);
     } catch (e) {
-      console.warn(
-        `Failed to removeChild: ${node.nodeName.toLowerCase()} is not a child of ${this.nodeName.toLowerCase()}, try again with parentNode attribute. `
+      warn(
+        t("Failed to removeChild: {child} is not a child of {parent}, try again with parentNode attribute.", {
+          child: node.nodeName.toLowerCase(),
+          parent: this.nodeName.toLowerCase(),
+        })
       );
       if (node.isConnected && isFunction(node.parentNode?.removeChild)) {
         node.parentNode.removeChild(node);

@@ -16,6 +16,8 @@ import {
 import { getWujieById, getOptionsById, addSandboxCacheWithOptions } from "./common";
 import { EventBus } from "./event";
 import { WUJIE_TIPS_NOT_SUPPORTED } from "./constant";
+export { setLocale, getLocale } from "./i18n";
+export type { Locale } from "./i18n";
 
 export const bus = new EventBus(Date.now().toString());
 

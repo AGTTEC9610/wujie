@@ -57,7 +57,7 @@ export class EventBus {
   public $off(event: string, fn: Function): EventBus {
     const cbs = this.eventObj[event];
     if (!event || !cbs || !cbs.length) {
-      warn(`${event} ${WUJIE_TIPS_NO_SUBJECT}`);
+      warn(WUJIE_TIPS_NO_SUBJECT, event);
       return this;
     }
 
@@ -89,7 +89,7 @@ export class EventBus {
     });
 
     if (!event || (cbs.length === 0 && allCbs.length === 0)) {
-      warn(`${event} ${WUJIE_TIPS_NO_SUBJECT}`);
+      warn(WUJIE_TIPS_NO_SUBJECT, event);
     } else {
       try {
         for (let i = 0, l = cbs.length; i < l; i++) cbs[i](...args);
