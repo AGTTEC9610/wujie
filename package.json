@@ -13,7 +13,7 @@
     "start": "NODE_OPTIONS=--openssl-legacy-provider lerna run start --parallel",
     "doc": "lerna run docs:dev",
     "clean": "rimraf node_modules **/*/node_modules",
-    "test": "NODE_OPTIONS=--openssl-legacy-provider lerna run test --scope wujie",
+    "test": "NODE_OPTIONS=--openssl-legacy-provider lerna run test --scope @agttec9610/wujie",
     "commitlint": "commitlint -E COMMIT_EDITMSG_PATH",
     "husky-commitlint": "commitlint -e",
     "prepare": "husky install"
