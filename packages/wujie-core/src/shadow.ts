@@ -19,6 +19,7 @@ import { getExternalStyleSheets } from "./entry";
 import Wujie from "./sandbox";
 import { initBase, patchElementEffect } from "./iframe";
 import { patchRenderEffect } from "./effect";
+import { patchShadowHtmlForRecorder } from "./recorder";
 import { getCssLoader, getPresetLoaders } from "./plugin";
 import { getAbsolutePath, getContainer, getCurUrl, isFunction, setAttrsToElement, warn } from "./utils";
 
@@ -256,14 +257,9 @@ export async function renderTemplateToShadowRoot(
   shadowRoot.body = shadowRoot.querySelector("body");
 
   const shadowHtml = shadowRoot.firstElementChild as HTMLElement;
+  // 修复 html parentNode（录屏脚本读取时给真实值，见 recorder.ts）
+  patchShadowHtmlForRecorder(shadowHtml, shadowRoot, iframeWindow);
   Object.defineProperties(shadowHtml, {
-    // 修复 html parentNode
-    parentNode: {
-      enumerable: true,
-      configurable: true,
-      get: () => iframeWindow.document,
-    },
-
     // 修复 html getBoundingClientRect
     getBoundingClientRect: {
       enumerable: true,

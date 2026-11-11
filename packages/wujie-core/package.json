@@ -1,6 +1,6 @@
 {
   "name": "@agttec9610/wujie",
-  "version": "2.1.0-agt.0",
+  "version": "2.1.0-agt.1",
   "description": "极致的微前端框架",
   "main": "./lib/index.js",
   "module": "./esm/index.js",
