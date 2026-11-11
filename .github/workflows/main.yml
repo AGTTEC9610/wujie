@@ -88,7 +88,9 @@ jobs:
             if npm view "${package_name}@${package_version}" version --registry=https://registry.npmjs.org/ >/dev/null 2>&1; then
               echo "${package_name}@${package_version} already exists, skipping."
             else
-              npm publish "./${package_dir}" --ignore-scripts --access public --registry=https://registry.npmjs.org/
+              # Las versiones del fork son prerelease (-agt.N) y npm 11 exige --tag para
+              # publicarlas; van a latest como las anteriores.
+              npm publish "./${package_dir}" --ignore-scripts --access public --tag latest --registry=https://registry.npmjs.org/
             fi
           }
 
